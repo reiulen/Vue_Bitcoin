@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/convertion-rupiah-bitcoin">
+        <ConvertionRupiahBitcoin />
+      </Route>
+      <Route path="/convertion-bitcoin-rupiah">
+        <ConvertionBitcoinRupiah />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from "./views/Home.vue";
+import ConvertionRupiahBitcoin from "./views/ConvertionRupiahBitcoin.vue";
+import ConvertionBitcoinRupiah from "./views/ConvertionBitcoinRupiah.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Home,
+    ConvertionRupiahBitcoin,
+    ConvertionBitcoinRupiah,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

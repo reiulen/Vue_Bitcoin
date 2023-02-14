@@ -1,4 +1,7 @@
+import { install } from 'vue-router-dom'
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+ 
+const app = createApp(App).use(install)
+ 
+app.mount('#app')
