@@ -10,6 +10,9 @@
       <Route path="/convertion-bitcoin-rupiah">
         <ConvertionBitcoinRupiah />
       </Route>
+      <Route path="*">
+        404
+      </Route>
     </Routes>
   </BrowserRouter>
 </template>
